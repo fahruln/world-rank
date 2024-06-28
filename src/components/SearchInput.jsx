@@ -1,7 +1,7 @@
 export default function SearchInput({ handleSearch }) {
   return (
     <form action="">
-      <div className="flex w-72 bg-darkGray px-3 py-1 rounded-xl">
+      <div className="flex w-96 bg-darkGray px-3 py-1 rounded-xl">
         <img src="./Search.svg" alt="" className="pr-2" />
         <input
           type="search"

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export default function CountriesTable({ countries, loading, error }) {
+export default function CountriesTable({ countries, loading }) {
   const navigate = useNavigate();
   return (
     <table className="w-full h-fit font-semibold">
@@ -22,10 +22,10 @@ export default function CountriesTable({ countries, loading, error }) {
               Loading...
             </td>
           </tr>
-        ) : error.length > 0 ? (
+        ) : countries.length === 0 ? (
           <tr>
             <td rowSpan={5} colSpan={5} className="py-4 text-center">
-              {error}
+              Country not found!
             </td>
           </tr>
         ) : (
